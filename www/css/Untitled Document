@@ -1,0 +1,67 @@
+var ques=new Array("as","Vo","BM");
+var hint=new Array("a","V","B");
+ 
+var ans=new Array("asb","Volvo","BMW");
+var gen;
+function my()
+{
+	  // alert("here");
+	   /* var x = document.getElementById("sel").value;*/
+	   // document.getElementById("level").style.display = "none";
+	    gen = Math.floor((Math.random()*100)+1)%3;
+	   
+	    /*var form1 = document.createElement("form");
+	    form1.setAttribute("class","well");
+	    txt = document.createElement("input");
+	    txt.setAttribute('type',"text"); 
+	    txt.setAttribute('value',ques[gen]);*/
+	    
+	    document.getElementById("ques1").value = ques[gen];
+	   
+		//form1.appendChild(txt);
+	    //document.getElementsByTagName('body')[0].appendChild(form1);
+		
+	    var f = document.createElement("form");
+		f.setAttribute('class',"well");
+		var k = new Array();
+		var len = ans[gen].length;
+		for(var i = 0; i<len ;i++)
+        {
+			k[i] = document.createElement("input"); 
+			k[i].setAttribute('type',"button");
+			k[i].setAttribute('class',"btn btn-primary");
+			
+			document.getElementById("myform").appendChild(k[i]);
+		}   
+		     
+		//document.getElementsByTagName('body')[0].appendChild(f);
+		
+		 var but1= document.createElement("input");
+		 but1.setAttribute('type',"button");
+		 but1.setAttribute("value","Hint");
+		but1.addEventListener("click", hin())
+		 document.getElementsByTagName('body')[0].appendChild(but1);
+		 
+         var g= document.createElement("form");
+         g.setAttribute('class',"well");
+      /*  var alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        for(var i = 0; i<26 ;i++)
+        {
+			a = document.createElement("input"); 
+			a.setAttribute('type',"button");
+			a.setAttribute('class',"btn btn-primary");
+			a.setAttribute("value",alpha[i]);
+			a.setAttribute("name","A");
+			g.appendChild(a);
+		}  
+      document.getElementsByTagName('body')[0].appendChild(g);
+*/
+}
+
+function redirection()
+{
+	window.location = "index1.html"
+	
+	
+}
+
